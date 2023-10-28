@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dark-editor {
+    --accentBase: var(--a);
+    --accentBgSubtle: var(--ac);
+    --accentBg: var(--ac);
+    --accentBgHover: var(--af);
+    --accentBgActive: var(--af);
+    --accentLine: var(--a);
+    --accentBorder: var(--a);
+    --accentBorderHover: var(--af);
+    --accentSolid: var(--af);
+    --accentSolidHover: var(--af);
+    --accentText: var(--p);
+    --accentTextContrast: var(--pc);
+  
+    --baseBase: var(--p);
+    --baseBgSubtle: var(--p);
+    --baseBg: var(--p);
+    --baseBgHover: var(--p);
+    --baseBgActive: var(--p);
+    --baseLine: var(--mauve6);
+    --baseBorder: var(--mauve7);
+    --baseBorderHover: var(--mauve8);
+    --baseSolid: var(--mauve9);
+    --baseSolidHover: var(--mauve10);
+    --baseText: var(--p);
+    --baseTextContrast: var(--mauve12);
+  
+    color: var(--p);
+    background: var(--baseBg);
+}
+  
+
+#bodyMessage .wmde-markdown.wmde-markdown-color {
+    background: transparent;
 }
